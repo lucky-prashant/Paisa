@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binary Options Predictor</title>
+</head>
+<body>
+    <h2>Predict Next 5-Min Candle</h2>
+    <form method="POST">
+        <button type="submit">Get Prediction</button>
+    </form>
+    {% if predictions %}
+        <h3>Results:</h3>
+        <ul>
+        {% for pair, result in predictions %}
+            <li><strong>{{ pair }}</strong>: {{ result }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
